@@ -1,5 +1,6 @@
 可以将未被追踪的文件，添加进暂存区，也可以将当前工作区修改的文件，添加进暂存区
 . 表示所有的文件
+
 git add .
 
 git status -s
@@ -7,5 +8,11 @@ git status -s
 
 
 使用暂存区的index文件，直接覆盖工作区的内容，工作区中修改过未add的文件会丢失
+discard changes in working directory
 git checkout 文件名
 
+使用git add命令添加进暂存区以后，可以使用git reset HEAD <filename> 把这次提交从暂存区撤出
+git reset HEAD <filename>
+
+git commit 会把暂存区中的文件目录打包成一个新的新的节点，HEAD移动至新节点，原先的节点作为父节点
+git checkout HEAD
