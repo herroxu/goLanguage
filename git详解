@@ -66,9 +66,11 @@ git checkout <branch name>
 合并分支命令, 可以多次合并到统一分支，也可以选择合并后直接删除被并入的分支
 git merge
 
+创建分支并且立即切换
 git checkout -b <branch name>
 
-
+删除分支的命令
+git branch -d <branch name>
 
 
 
