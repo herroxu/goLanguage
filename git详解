@@ -58,6 +58,12 @@ git 分支管理：
 创建分支命令
 git branch <branch name>
 
+创建分支并且立即切换
+git checkout -b <branch name>
+
+删除分支的命令
+git branch -d <branch name>
+
 
 切换分支, git会使用该分支的最后提交的快照替换你的工作目录的内容，所以多个分支不需要多个目录
 使用此命令时，文件必须要commit，否则文件会丢失
@@ -66,14 +72,20 @@ git checkout <branch name>
 
 合并分支命令, 可以多次合并到统一分支，也可以选择合并后直接删除被并入的分支
 一旦某分支有了独立内容，希望合并到主分支，使用命令，将任何分支合并到当前分支中去
+合并时，会产生冲突，需要手动修改，完成后，使用git add /git commit 来提交
 git merge <branch name>
 
-创建分支并且立即切换
-git checkout -b <branch name>
 
-删除分支的命令
-git branch -d <branch name>
+git查看提交历史
+git log
+git log --oneline     简单查看
+git log --graph       查看历史中什么时候出现了分支，合并。
+git log --reverse     逆向显示所有数据
 
+
+git标签
+如果达到一个重要的阶段，并且希望永久的记住哪个特别的提交快照，可以使用git tag给它打上快照
+git tag -a v1.0   -a 表示带注解的标签
 
 
 
