@@ -1,9 +1,6 @@
 package main
 
-import (
-	"errors"
-	"fmt"
-)
+import "fmt"
 
 // GO错误处理
 //go语言通过 内置 的 错误接口 提供了非常简单的错误处理机制
@@ -15,37 +12,38 @@ import (
 //	Error() string
 //}
 
-func sqrt( n float64) (float64, error) {
-	if n <0 {
-		return 0, errors.New("math is not 0")
-	} else {
-		return 23,errors.New("")
-	}
-}
 
 type DivideError struct {
-	devidee int
-	devider int
+	dividee int
+	diveder int
 }
 
 
 func (de *DivideError) Error() string {
-	strFormat := "cannot proceed, %d"
-	return fmt.Sprintf(strFormat, de.devidee)
+	strFormat := "cannot proceed, the divider & zero\n dividee: %d \n divider: 0 "
+
+	return fmt.Sprintf(strFormat, de.dividee)
 }
 
+func Divide(varDividee int, varDivider int) (result int, errorMsg string){
+	if varDivider == 0 {
+		dData := DivideError{
+			dividee: varDividee,
+			diveder: varDivider,
+		}
+		errorMsg = dData.Error()
+		return
+	} else {
+		return varDividee / varDivider, ""
+	}
+}
 
 func main() {
-	a := 2.0123
-	result,err := sqrt(a)
-
-	if err != nil {
-		fmt.Println(err)
-		return
+	if result, errorMsg := Divide(100, 10); errorMsg == "" {
+		fmt.Println("100/10  = ", result)
 	}
 
-	fmt.Println(result)
-
-
-
+	if _,errorMsg := Divide(100, 0); errorMsg != "" {
+		fmt.Println("errorMsg is : ", errorMsg)
+	}
 }

@@ -1,18 +1,73 @@
+初始化
+git init <指定目录>
+
+
+不需要初始化就可以使用这个命令， 拷贝项目,可以到指定目录名称，不实用默认的名称
+git clone <url> <directory>
+
+
+基本快照：
 可以将未被追踪的文件，添加进暂存区，也可以将当前工作区修改的文件，添加进暂存区
 . 表示所有的文件
+git add . 或者 git add <filename1> <filename2>
 
-git add .
 
+查看此时git的状态
 git status -s
 
 
+查看执行git status的结果的详细信息
+git diff            用于显示已写入暂存区和改后未写入暂存区的区别
+git diff            尚未写入暂存区的改动
+git diff --cached   写入暂存区的改动
+git diff HEAD       未写与写入暂存区的所有的改动
+git diff --stat     显示摘要
 
-使用暂存区的index文件，直接覆盖工作区的内容，工作区中修改过未add的文件会丢失
-discard changes in working directory
-git checkout 文件名
 
-使用git add命令添加进暂存区以后，可以使用git reset HEAD <filename> 把这次提交从暂存区撤出
-git reset HEAD <filename>
+将缓存区的内容提交到仓库，每一次提交都会记录你的名字和电子邮件
+git config --global user.name "zhiming@italki.com"
+git config --global user.email zhiming@italki.com
+
 
 git commit 会把暂存区中的文件目录打包成一个新的新的节点，HEAD移动至新节点，原先的节点作为父节点
-git checkout HEAD
+git commit -m message  提交注释
+git commit -a     跳过git add 流程
+
+
+使用git add命令添加进暂存区以后，可以使用git reset HEAD <filename> 把自上次commit之后，所有的git add的提交都从暂存区撤出，作废,
+即，使用仓库区中的文件目录更新暂存区中的，但是工作区的内容不变
+git reset HEAD 或者 git reset HEAD <filename>
+
+
+会将暂存区的文件删除，但是对文件区的文件没有影响，此文件需要重新使用git add添加进暂存区，此命令使用于删除已经跟踪的文件，先删除暂存区，再提交，删除仓库区
+git -rm <filename>              工作区，暂存区，仓库区都删除了
+git -rm -f <filename>           删除之前修改过，强制删除
+git -rm --cache <filename>      只删除暂存区的内容
+git -rm -r * <directory>        如果是目录，递归删除
+
+git mv <filename1> <filename2>   暂存区文件重命名
+
+
+使用暂存区的index文件，直接覆盖工作区的内容或者指定的文件，工作区中修改过未add的文件会丢失(discard changes in working directory)
+git checkout 或者 git checkout <filename>
+
+
+git 分支管理：
+
+创建分支命令
+git branch <branch name>
+切换分支, git会使用该分支的最后提交的快照替换你的工作目录的内容，所以多个分支不需要多个目录
+git checkout <branch name>
+合并分支命令, 可以多次合并到统一分支，也可以选择合并后直接删除被并入的分支
+git merge
+
+
+
+
+
+
+使用这个命令时，会用HEAD指向的master分支中的全部或者部分文件替换暂存区以及工作区中的文件，
+这个命令是危险的，会清除工作区和暂存区的所有的未提交的内容
+git checkout HEAD 或者git checkout HEAD <filename>
+
+
