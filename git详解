@@ -67,9 +67,11 @@ git checkout <branch name>
 一旦某分支有了独立内容，希望合并到主分支，使用命令，将任何分支合并到当前分支中去
 git merge <branch name>
 
+创建分支并且立即切换
 git checkout -b <branch name>
 
-
+删除分支的命令
+git branch -d <branch name>
 
 
 
