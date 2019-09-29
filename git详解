@@ -56,8 +56,13 @@ git 分支管理：
 
 创建分支命令
 git branch <branch name>
+
+
 切换分支, git会使用该分支的最后提交的快照替换你的工作目录的内容，所以多个分支不需要多个目录
+使用此命令时，文件必须要commit，否则文件会丢失
 git checkout <branch name>
+
+
 合并分支命令, 可以多次合并到统一分支，也可以选择合并后直接删除被并入的分支
 git merge
 
