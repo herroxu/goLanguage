@@ -64,7 +64,8 @@ git checkout <branch name>
 
 
 合并分支命令, 可以多次合并到统一分支，也可以选择合并后直接删除被并入的分支
-git merge
+一旦某分支有了独立内容，希望合并到主分支，使用命令，将任何分支合并到当前分支中去
+git merge <branch name>
 
 git checkout -b <branch name>
 
