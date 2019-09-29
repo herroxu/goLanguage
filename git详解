@@ -30,6 +30,7 @@ git config --global user.email zhiming@italki.com
 
 
 git commit 会把暂存区中的文件目录打包成一个新的新的节点，HEAD移动至新节点，原先的节点作为父节点
+<<<<<<< HEAD
 git commit -m message  提交注释
 git commit -a     跳过git add 流程
 
