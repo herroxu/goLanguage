@@ -50,7 +50,7 @@ git mv <filename1> <filename2>   暂存区文件重命名
 
 
 使用暂存区的index文件，直接覆盖工作区的内容或者指定的文件，工作区中修改过未add的文件会丢失(discard changes in working directory)
-git checkout 或者 git checkout <filename>
+git checkout <filename>
 
 
 git 分支管理：
@@ -130,3 +130,7 @@ git checkout HEAD 或者git checkout HEAD <filename>
 明仔????? 很吊？？？？？？？？？？？？
 
 老子 天上第一！！！！！！！
+
+
+
+
