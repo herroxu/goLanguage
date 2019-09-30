@@ -30,6 +30,7 @@ git config --global user.email zhiming@italki.com
 
 
 git commit 会把暂存区中的文件目录打包成一个新的新的节点，HEAD移动至新节点，原先的节点作为父节点
+<<<<<<< HEAD
 git commit -m message  提交注释
 git commit -a     跳过git add 流程
 
@@ -57,15 +58,6 @@ git 分支管理：
 创建分支命令
 git branch <branch name>
 
-
-切换分支, git会使用该分支的最后提交的快照替换你的工作目录的内容，所以多个分支不需要多个目录
-使用此命令时，文件必须要commit，否则文件会丢失
-git checkout <branch name>
-
-
-合并分支命令, 可以多次合并到统一分支，也可以选择合并后直接删除被并入的分支
-git merge
-
 创建分支并且立即切换
 git checkout -b <branch name>
 
@@ -73,10 +65,57 @@ git checkout -b <branch name>
 git branch -d <branch name>
 
 
+切换分支, git会使用该分支的最后提交的快照替换你的工作目录的内容，所以多个分支不需要多个目录
+使用此命令时，文件必须要commit，否则文件会丢失
+git checkout <branch name>
+
+
+合并分支命令, 可以多次合并到统一分支，也可以选择合并后直接删除被并入的分支
+一旦某分支有了独立内容，希望合并到主分支，使用命令，将任何分支合并到当前分支中去
+合并时，会产生冲突，需要手动修改，完成后，使用git add /git commit 来提交
+git merge <branch name>
+
+
+git查看提交历史
+git log
+git log --oneline     简单查看
+git log --graph       查看历史中什么时候出现了分支，合并。
+git log --reverse     逆向显示所有数据
+
+
+git标签
+如果达到一个重要的阶段，并且希望永久的记住哪个特别的提交快照，可以使用git tag给它打上快照
+git tag -a v1.0   -a 表示带注解的标签
+git tag -a v2.0 e6e3da8 给某个提交打标签
+
+git tag   查看所有的标签
+
+
+git的远程仓库
+
+查看当前的远程库
+git remote -v
+
+将远地仓库与本地仓库关联
+git remote add origin <url>
+
+git 有两个命令用来提取远程仓库的更新
+git fetch
+
+
+git fetch origin
+
+git merge origin/master
+git merge
+
+
+推送到远程仓库的master分支上
+git push origin master
+
+
 使用这个命令时，会用HEAD指向的master分支中的全部或者部分文件替换暂存区以及工作区中的文件，
 这个命令是危险的，会清除工作区和暂存区的所有的未提交的内容
 git checkout HEAD 或者git checkout HEAD <filename>
-
 
 git remote -v
 
