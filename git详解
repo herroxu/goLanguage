@@ -105,14 +105,19 @@ git push origin master
 git 有两个命令用来提取远程仓库的更新
 git fetch
 
-
+显示远端的数据信息，有数据表示远端的数据已经被更新
 git fetch origin
 
+
+从名为origin的远程上拉取名为master的分支到本地分支origin/master(此分支自动生成，合并后自动删除)上
+git fetch origin master
+
+
+将拉取到的分支名为origin/master上的内容，合并到当前分支
 git merge origin/master
-git merge
 
 
-推送到远程仓库的master分支上
+将本地分支的内容，同步推送到远程仓库的master分支上
 git push origin master
 
 
