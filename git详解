@@ -73,10 +73,14 @@ git checkout -b <branch name>
 git branch -d <branch name>
 
 
-
-
 使用这个命令时，会用HEAD指向的master分支中的全部或者部分文件替换暂存区以及工作区中的文件，
 这个命令是危险的，会清除工作区和暂存区的所有的未提交的内容
 git checkout HEAD 或者git checkout HEAD <filename>
 
 
+git remote -v
+
+git pull <branch name>
+
+在远端生成一个分支，与本地分支发生关联，develop就是本地分支名
+git push --set-upstream origin develop
