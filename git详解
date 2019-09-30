@@ -125,12 +125,10 @@ git push origin master
 这个命令是危险的，会清除工作区和暂存区的所有的未提交的内容
 git checkout HEAD 或者git checkout HEAD <filename>
 
-我是明仔， 我怕谁？？？？？？？
+git remote -v
 
-明仔????? 很吊？？？？？？？？？？？？
-
-老子 天上第一！！！！！！！
+git pull <branch name>
 
 
-
-
+在远端生成一个分支，与本地分支发生关联，develop就是本地分支名
+git push --set-upstream origin develop
