@@ -99,6 +99,9 @@ git remote -v
 将远地仓库与本地仓库关联
 git remote add origin <url>
 
+将本地的分支的内容提交到远端的master分支上
+git push origin master
+
 git 有两个命令用来提取远程仓库的更新
 git fetch
 
