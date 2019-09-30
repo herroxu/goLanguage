@@ -91,6 +91,25 @@ git tag -a v2.0 e6e3da8 给某个提交打标签
 git tag   查看所有的标签
 
 
+git的远程仓库
+
+查看当前的远程库
+git remote -v
+
+git 有两个命令用来提取远程仓库的更新
+git fetch
+
+
+git fetch origin
+
+git merge origin/master
+git merge
+
+
+推送到远程仓库的master分支上
+git push origin master
+
+
 使用这个命令时，会用HEAD指向的master分支中的全部或者部分文件替换暂存区以及工作区中的文件，
 这个命令是危险的，会清除工作区和暂存区的所有的未提交的内容
 git checkout HEAD 或者git checkout HEAD <filename>
