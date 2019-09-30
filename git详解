@@ -96,6 +96,9 @@ git的远程仓库
 查看当前的远程库
 git remote -v
 
+将远地仓库与本地仓库关联
+git remote add origin <url>
+
 git 有两个命令用来提取远程仓库的更新
 git fetch
 
