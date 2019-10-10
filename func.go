@@ -1,117 +1,50 @@
+// HTTP文件服务器， web常见的服务器之一
+
 package main
 
-// 函数声明告诉了编译器函数的名称，返回类型，参数
-// go语言的标准库提供了多种可动用的内置函数，len()
-import (
-	"fmt"
-	"math"
-)
-
-// 函数声明, 函数的参数默认使用的是值传递，这样不会影响实参的值
-func max(num1 string, num2 int) int {
-	result := num1
-	if len(result) >= num2 {
-		return len(result)
-	} else {
-		return num2
-	}
-}
-
-// 定义一个结构体类型和该类型的方法
-type Circle struct {
-	radius float64
-}
-
-// 定义该结构体的方法
-func (c Circle) getArea() float64 {
-	return 3.14 * c.radius * c.radius
-}
-
-
-// 声明一个函数类型
-type cb func(int) int
-
-// 写一个函数的闭包，闭包的目的是可以共享某些变量
-func getsecquence() func() int {
-	i := 0
-	return func() int {
-		i++
-		return i
-	}
-}
-
+import "net/http"
 
 func main() {
-	var a string="abcd"
-	var b int=3
-	var ret int
-	var c1 Circle
-	c1.radius = 10.00
-
-	fmt.Println(c1.getArea())
-
-	nextNumber := getsecquence()
-	for i:=1; i<10; i++ {
-		fmt.Println(nextNumber())
-	}
-
-	ret = max(a, b)
-	fmt.Println(ret)
-
-	getsqurtroot := func(x float64) float64 {
-		return math.Sqrt(x)
-	}
-	fmt.Println(getsqurtroot(19))
-
-
-	//
-	var dong, ge int
-	dong = testCallBack(3, callback)
-	ge = testCallBack(6, func(x int) int {
-		fmt.Println("我不是潘金莲")
-		return x
-	})
-	fmt.Println(dong, ge)
-
-	add_fun := add(1,3)
-	fmt.Println(add_fun())
-	fmt.Println(add_fun())
-	fmt.Println(add_fun())
-
-	add_f := add_p(3,4)
-	fmt.Println(add_f(5,6))
-	fmt.Println(add_f(3,4))
-	fmt.Println(add_f(1,2))
-
+	http.Handle("/", http.FileServer(http.Dir(".")))
+	http.ListenAndServe(":8000", nil)
 }
+/*
+工作区
+src目录
+	以代码包的形式组织并保存Go源码文件
+pkg目录
+	存放通过go install命令安装后的代码包的开档文件
+bin目录
+	存放通过go install命令安装后，由Go命令源码文件生成的可执行文件
 
-func testCallBack(x int, f cb) int {
-	return f(x)
+命令源码文件
+库源码文件
+测试源码文件
+	1。文件名以 "_test.go"结尾
+	2。文件中至少包含一个名称以Test开头或Benchmark开头，且拥有一个类型为*testing.T或者*testing.B的函数testing.T是一个结构体
+
+
+*/
+// 包初始化
+//1。先对全局变量初始化
+//2。然后init()
+//3. 然后main()
+func init() {
+	i, j := 1, 4
+	// 两值交换
+	i, j = j, i
 }
+//静态类型语言
+//var a,b *int
+//var (
+//	c int
+//	d string
+//	e []float64
+//	f func() bool
+//	g struct{
+//		x int
+//	  }
+//)
+//var hp int = 100
+//var hp = 100
 
-func callback(x int) int {
-	fmt.Println("我是回调函数")
-	return x
-}
-
-// 闭包不带参数
-func add(x, y int) func() (int, int) {
-	i := 0
-	return func() (int, int) {
-			i++
-			return i,x+y
-	}
-}
-
-// 闭包带参数补充
-func add_p(x, y int) func(i, j int) (int, int, int){
-	c := 0
-	return func(i, j int) (int, int, int){
-		c++
-		return c, x+y, i+j
-	}
-}
-
-// go语言函数方法
-// go语言函数作为实参
-// go

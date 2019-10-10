@@ -16,6 +16,7 @@ func main() {
 	var country map[string]string
 	country = make(map[string]string)
 
+	// 使用make创建一个map实例对象
 	country1 := make(map[string]string)
 
 	country["china"] = "beijing"
@@ -45,6 +46,10 @@ func main() {
 	var a string="cas"
 	var b int=234567
 	fmt.Println(a[2], b>>4)
+	if country["mill"] == "" {
+		fmt.Println(a[2], b>>4)
+
+	}
 }
 
 

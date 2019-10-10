@@ -1,74 +1,77 @@
 package main
-
-import (
-	"fmt"
-	"time"
-)
-
-// go并发， 通过关键字开启goroutine即可
-// goroutine是轻量级线程， 语法
-// go 函数名（ 参数列表 ， 同一个程序中的所有的goroutine共享同一个地址空间
-
-//使用了goroutine的函数，再次调用，传不同的参数时，相当于又调用一个goroutine
-
-
-func say(s string) {
-	for i := 0; i < 5; i++ {
-		time.Sleep(100*time.Millisecond)
-		fmt.Println(s)
-	}
-}
-// 通道channel是一个用来传递数据的一个数据结构，可用于两个goroutine之间通过传递一个指定类型的值
-// 来同步运行和通讯，操作符 <- 用于指定通道的方向，发送或接收。如果未指定方向，则为双向通道
-// ch <- v 把 v 发送到通道 ch
-// v := <- ch 从通道ch 接收数据，并把值赋给v
-// ch := make(chan int)
-
-func sum(s []int, c chan int) {
-	sum := 0
-	for _,v := range s {
-		sum += v
-	}
-	c <- sum
-}
-
-
-func main() {
-	go say("中国")
-	say("中国")
-
-	s := []int{5,34,23,45,75,23,42,25}
-
-	c := make(chan int)
-	go sum(s[:len(s)/2], c)
-	go sum(s[len(s)/2:], c)
-	x, y := <-c, <-c
-
-	fmt.Println(x, y, x+y)
-	//ch 通道的缓存区的大小为2
-	ch := make(chan int, 2)
-	ch <- 1
-	ch <- 2
-	fmt.Println(<-ch)
-	fmt.Println(<-ch)
-
-	//v, ok := <-ch, 如果通道接收不到数据后OK就为false，这是通道就可以使用close（）函数来关闭
-	c1 := make(chan int, 10)
-	go fibo(cap(c1), c1)
-
-	for i := range c1 {
-		fmt.Println(i)
-	}
-}
-
-func fibo(n int, c chan int) {
-	x, y := 0, 1
-	for i := 0; i<n; i++ {
-		c <- x
-		x, y = y, x+y
-	}
-	close(c)
-}
-
-
-
+//
+//import (
+//	"fmt"
+//	"math/rand"
+//	"strconv"
+//	"time"
+//)
+//
+//// 标准库包名
+///*
+//bufio    带缓冲的i/o操作
+//bytes	字节操作
+//container	封装堆，列表和环形列表等容器
+//crypto	加密算法
+//database	数据库驱动和接口
+//debug	调试功能
+//encoding	实现算法如Json,XML, Base64等
+//flag	命令行解析
+//fmt 	格式化操作
+//go		go语言的词法，语法树。类型等
+//html	HTML转义，模版系统
+//image   常见图形格式的访问及生成
+//io		实现io访问接口及封装
+//math	数学库
+//net		网络库，支持Socket, HTTP, 邮件， RPC， SMTP
+//os		操作系统平台，不依赖平台操作封装
+//path
+//plugin
+//reflect
+//regexp		正则表达式封装
+//runtime
+//sort		排序接口
+//strings		字符串转换/解析， 实用函数
+//time		时间接口
+//text		文本模版
+//strconv
+//
+//*/
+//import (
+//	"fmt"
+//	"math/rand"
+//	"time"
+//)
+//
+////chan<- string 表示声明一个只能接收字符串的通道
+//func productor(head string, channel chan<- string) {
+//	for {
+//		channel <- fmt.Sprintf("%s:%v", head, rand.Int31())
+//		time.Sleep(time.Second)
+//	}
+//}
+//
+//// <-chan 表示只能用来输出的通道
+//func customer(channel1 <-chan string) {
+//	for {
+//		//
+//		message := <-channel1
+//		fmt.Println(message)
+//	}
+//}
+//
+//func main() {
+//	// 创建一个通道，只能传输字符串
+//	channel1 := make(chan string)
+//
+//	// 调用生产者函数
+//	go productor("cat", channel1)
+//	go productor("dog", channel1)
+//
+//	strconv.Atoi() // string -> int
+//	strconv.Itoa() // int -> string
+//	strconv.ParseBool(), strconv.ParseFloat() .......
+//	strconv.FormatUint()
+//	strconv.AppendFloat()
+//	customer(channel1)
+//}
