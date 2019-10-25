@@ -19,7 +19,7 @@ import "fmt"
 // go语言中有四种 接口相关的类型 转换情形
 
 //i.T
-func main()  {
+func man()  {
 	// 编译器将123的类型推断为  内置类型int
 	var x interface{} = 123
 	// 断言为非接口类型

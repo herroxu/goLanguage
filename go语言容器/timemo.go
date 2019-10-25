@@ -17,6 +17,6 @@ func timeCount() time.Duration {
 }
 
 //func main()  {
-//	test()
+//	goTest()
 //}
 

@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f66ab0e0-d3b6-4443-b381-ef147edbcbfd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/baa.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/list.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sqlalchemy.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/func.go" beforeDir="false" afterPath="$PROJECT_DIR$/func.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goroutine.go" beforeDir="false" afterPath="$PROJECT_DIR$/goroutine.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.go" beforeDir="false" afterPath="$PROJECT_DIR$/map.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prior.go" beforeDir="false" afterPath="$PROJECT_DIR$/prior.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/switch.go" beforeDir="false" afterPath="$PROJECT_DIR$/switch.go" afterDir="false" />
-    </list>
+    <list default="true" id="f66ab0e0-d3b6-4443-b381-ef147edbcbfd" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +29,9 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="/usr/local/Cellar/go@1.9/1.9.7/libexec" />
+  <component name="GOROOT" path="$PROJECT_DIR$/../go1.10.2" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../goTest" />
   </component>
   <component name="GoLibraries">
     <option name="urls">
@@ -52,6 +42,7 @@
     <option name="useGoPathFromSystemEnvironment" value="false" />
   </component>
   <component name="ProjectId" id="1RDmhOJHlheb95bRTchtrot71Id" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="GO_FMT" value="true" />
@@ -62,7 +53,12 @@
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+    <property name="settings.editor.selected.configurable" value="go.sdk" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/go语言容器" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -76,64 +72,107 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build list.go">
-    <configuration name="go build baa.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="test" />
+  <component name="RunManager" selected="Go Build.go build 7.8.go">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="GoTest" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/baa.go" />
+      <filePath value="$PROJECT_DIR$/" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build list.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="test" />
+    <configuration name="go build 7。1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="GoTest" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/go语言接口/7。1.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build 7.2.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="GoTest" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/go语言接口/7.2.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build 7.5.4.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="GoTest" />
+      <working_directory value="$PROJECT_DIR$/go语言接口" />
+      <kind value="DIRECTORY" />
+      <filePath value="$PROJECT_DIR$/go语言接口/7.5.4.go" />
+      <directory value="$PROJECT_DIR$/go语言接口" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build 7.5.4.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="GoTest" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/go语言接口/7.5.4.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build 7.7.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="GoTest" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/go语言接口/7.7.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build 7.8.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="GoTest" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/../goTest/go语言接口/7.8.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="GoTest" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/list.go" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
       <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build myMath2.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="test" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/../myMath/myMath2.go" />
-      <directory value="$PROJECT_DIR$/" />
+    <configuration name="go test" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="GoTest" />
+      <working_directory value="$PROJECT_DIR$/split" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$/split" />
+      <filePath value="$PROJECT_DIR$/split/split_test.go" />
+      <pattern value="^TestSplit$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build prior.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="test" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/prior.go" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build switch.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="test" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/switch.go" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Go Build.go build 7。1.go" />
+      <item itemvalue="Go Build.go build 7.2.go" />
+      <item itemvalue="Go Build.go build 7.5.4.go" />
+      <item itemvalue="Go Test.go test" />
+      <item itemvalue="Go Build.go build 7.7.go" />
+      <item itemvalue="Go Build.go build 7.8.go" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build list.go" />
-        <item itemvalue="Go Build.go build switch.go" />
-        <item itemvalue="Go Build.go build myMath2.go" />
-        <item itemvalue="Go Build.go build prior.go" />
-        <item itemvalue="Go Build.go build baa.go" />
+        <item itemvalue="Go Build.go build 7.8.go" />
+        <item itemvalue="Go Build.go build 7.7.go" />
+        <item itemvalue="Go Build.go build 7.5.4.go" />
+        <item itemvalue="Go Build.go build 7.5.4.go" />
+        <item itemvalue="Go Build.go build 7.2.go" />
       </list>
     </recent_temporary>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -156,5 +195,29 @@
   </component>
   <component name="VgoProject">
     <proxy>off</proxy>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/../goTest/go语言结构体/6.15.go</url>
+          <line>55</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/../goTest/go语言结构体/6.15.go</url>
+          <line>68</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/../goTest/go语言结构体/6.15.go</url>
+          <line>66</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/test$TestSplit_in_split_test_go.out" NAME="TestSplit in split_test.go Coverage Results" MODIFIED="1571827756511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

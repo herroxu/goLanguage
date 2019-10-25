@@ -1,0 +1,27 @@
+函数的三种类型：
+    1、普通带有名字函数，
+    2、匿名函数或者lambda函数
+    3、闭包
+
+函数字面量类型，函数命名类型
+
+函数字面量类型： func(InputTypeList)OutputTypeList
+
+函数命名类型: type NewType OldType
+type NewFuncType FuncLiteral
+
+
+函数签名  “有名函数”或“匿名函数”的字面量类型
+
+函数声明  func FuncName (InputTypeList)OutputTypeList
+
+函数分类： 有名函数func FunctionName() ，匿名函数 func ()
+
+函数类型： 函数字面量类型，函数命名类型
+
+如果实参包括引用类型，如指针、slice(切片)、map、function、channel， interface等类型，实参可能会由于函数的简介引用被修改。
+
+在函数调用时，像切片（slice）、字典（map）、接口（interface）、通道（channel）这样的引用类型都是默认使用引用传递（即使没有显示的指出指针）
+
+返回一个多值结果可以是调用另一个多值返回的函数
+

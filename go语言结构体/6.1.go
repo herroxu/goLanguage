@@ -9,7 +9,7 @@ type Point struct {
 	y int
 }
 
-func main()  {
+func m()  {
 	point := new(Point) // point为指针类型
 	point.y = 10
 	(*point).x = 20
@@ -25,7 +25,7 @@ func main()  {
 	p1 := new(Point)
 	fmt.Println(p1)
 
-	p2 := &Point{2,5}
+	p2 := &Point{x:2,y:5}
 	fmt.Println(p2)
 
 	//
@@ -35,6 +35,7 @@ func main()  {
 	b := &[]int{1,2,3}
 	fmt.Println(b)
 	i := 3
+
 	cmd := newCommand("mng", &i, "dong")
 	fmt.Println(cmd)
 

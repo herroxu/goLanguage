@@ -1,0 +1,67 @@
+if condition1 {
+
+} else if condition2 {
+
+} else {
+
+}
+
+特殊写法
+    if表达是之前添加一个执行语句
+    if err := Connect(); err != nil {
+
+    } else {
+
+    }
+
+||, &&, !
+==, !=, <, >, <=, >=
++, -, *, /, %
+
+常规使用
+for i:=0; i<10; i++ {
+
+}
+
+无限循环
+for {
+    break JLoop
+}
+JLoop:
+
+continue和break来控制循环，break可以选择终止哪个循环
+
+for循环中初始化和条件表达式可以忽略，但是分号必须写
+
+所有的for循环都可以用无限循环的模式写
+
+break，goto, return, panic语句可以强制退出
+
+for range 可以迭代 数组，切片，字符串，通道(只返回通道内的值)，map
+
+for key,val := range coll {
+
+}
+
+switch   一分支多个值
+         分支表达式
+         fallthrough 关键字
+
+goto使用标签，当要跳出多次循环时使用
+定义标签
+BreakHere:
+
+continue;   break后加标签，表示退出某个标签对应的代码块，标签要求必须定义在对应的for、switch、select上
+OuterLoop:
+    for i:=0; i<3: i++ {
+        break OuterLoop
+    }
+
+
+
+
+
+
+
+
+
