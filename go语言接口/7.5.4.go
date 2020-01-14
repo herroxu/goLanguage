@@ -11,7 +11,7 @@ func createLogger() *Logger {
 	//
 	fw := newFileWriter()
 	//
-	if err := fw.SetFile("7.log"); err != nil {
+	if err := fw.SetFile("a.log"); err != nil {
 		fmt.Println(err)
 	}
 
