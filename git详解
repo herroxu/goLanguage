@@ -75,6 +75,7 @@ git checkout <branch name>
 合并时，会产生冲突，需要手动修改，完成后，使用git add /git commit 来提交
 git merge <branch name>
 
+我就是最美的烟火
 
 git查看提交历史
 git log
